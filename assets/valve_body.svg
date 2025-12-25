@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150">
+  <defs>
+    <linearGradient id="valveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8c5be"/>
+      <stop offset="50%" style="stop-color:#c94f52"/>
+      <stop offset="100%" style="stop-color:#a2272c"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Mechanical Valve Body -->
+  <ellipse cx="100" cy="75" rx="90" ry="65" fill="none" stroke="#c94f52" stroke-width="4" filter="url(#glow)"/>
+  <ellipse cx="100" cy="75" rx="80" ry="55" fill="none" stroke="#a2272c" stroke-width="2"/>
+  
+  <!-- Left Leaflet -->
+  <path d="M 100 20 Q 40 75 100 130" fill="url(#valveGradient)" stroke="#f8c5be" stroke-width="2"/>
+  
+  <!-- Right Leaflet -->
+  <path d="M 100 20 Q 160 75 100 130" fill="url(#valveGradient)" stroke="#f8c5be" stroke-width="2"/>
+  
+  <!-- Center Hinge -->
+  <circle cx="100" cy="75" r="8" fill="#f8c5be"/>
+  <circle cx="100" cy="75" r="4" fill="#c94f52"/>
+</svg>
